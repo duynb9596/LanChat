@@ -1,0 +1,23 @@
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.exe.config
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.exe
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.pdb
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Login.resources
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Properties.Resources.resources
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csproj.GenerateResource.Cache
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.exe
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.pdb
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csprojResolveAssemblyReference.cache
+C:\Users\DELL\source\repos\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.ChatZone.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.exe.config
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.exe
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.pdb
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csprojResolveAssemblyReference.cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.ChatZone.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Login.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Properties.Resources.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csproj.GenerateResource.Cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csproj.CoreCompileInputs.cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.exe
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.pdb
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.User.resources

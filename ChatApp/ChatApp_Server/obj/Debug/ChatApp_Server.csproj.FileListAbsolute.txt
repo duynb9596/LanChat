@@ -1,0 +1,24 @@
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.exe.config
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.exe
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.pdb
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csprojResolveAssemblyReference.cache
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.Server.resources
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.Properties.Resources.resources
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csproj.GenerateResource.Cache
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.exe
+C:\Users\DELL\source\repos\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.pdb
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.exe.config
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.exe
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\ChatApp_Server.pdb
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csprojResolveAssemblyReference.cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.Server.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.Properties.Resources.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csproj.GenerateResource.Cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.csproj.CoreCompileInputs.cache
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.exe
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\obj\Debug\ChatApp_Server.pdb
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\EntityFramework.dll
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\EntityFramework.xml
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatApp_Server\bin\Debug\EntityFramework.SqlServer.xml
