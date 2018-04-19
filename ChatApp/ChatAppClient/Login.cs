@@ -38,28 +38,42 @@ namespace ChatAppClient
 			string mRecipient = message[3];
 			switch(mType)
 			{
+				case "Connect":
+					ConnectAction(mContent);
+					break;
 				case "Login":
-					LoginAction(mContent, mRecipient);
+					LoginAction(mContent);
 					break;
 				default:
 					break;
 			}
 		}
 
-		private void LoginAction(string content, string IP)
+		private void ConnectAction(string content)
 		{
-			if (content.Equals("LoginSucceeded"))
+			if (content.Equals("Accepted"))
+			{
+				this.Invoke(new Action(() =>
+				{
+					txtServerIP.Enabled = false;
+					btnConnect.Enabled = false;
+					MessageBox.Show("Connect Succeeded!");
+				}));
+			}
+		}
+
+		private void LoginAction(string content)
+		{
+			if (!content.Equals("<<LoginFailed>>"))
 			{
 				this.Invoke(new Action(() =>
 				{
 					MessageBox.Show("Login Succeeded!");
-					ChatZone chatZone = new ChatZone();
+					User userForm = new User(this);
 					this.Hide();
-					chatZone.ChangeLabelName(IP);
-					chatZone.Show();
+					userForm.Show();
+					userForm.ChangeLabelUsername(content);
 				}));
-
-
 			}
 			else
 			{
@@ -78,21 +92,11 @@ namespace ChatAppClient
 				{
 					string serverIP = txtServerIP.Text;
 					Client.Connect(serverIP, PORT_NUMBER);
-					//stream = client.GetStream();
 
 					string str = "Connect|ABC|123|Server";
 
-					// 2. send
 					Client.Send(str);
 
-					//stream.Write(data, 0, data.Length);
-
-					//client.Close();
-
-					//MessageBox.Show("Login success!");
-					//ChatZone chatZone = new ChatZone();
-					//this.Hide();
-					//chatZone.Show();
 				}
 				catch (Exception ex)
 				{
@@ -110,18 +114,11 @@ namespace ChatAppClient
 			if (txtUsername.Text != "" && txtPassword.Text != "")
 			{
 
-				// 1. connect
 				try
 				{
 					string username = txtUsername.Text;
 					string password = txtPassword.Text;
-
 					string str = "Login|" + username + "|" + password + "|" + "server";
-
-					// 2. send
-					//byte[] data = encoding.GetBytes(str);
-					//stream.Write(data, 0, data.Length);
-
 					Client.Send(str);
 				}
 				catch (Exception ex)
@@ -129,10 +126,10 @@ namespace ChatAppClient
 					MessageBox.Show(ex.ToString());
 				}
 			}
+			else if (txtUsername.Text == "")
+				MessageBox.Show("Username field cannot be empty!");
 			else
-			{
-				MessageBox.Show("Username and Password cannot be left empty!");
-			}
+				MessageBox.Show("Password field cannot be empty!");
 		}
 
 		private void txtServerIP_Click(object sender, EventArgs e)
@@ -148,6 +145,30 @@ namespace ChatAppClient
 		private void txtPassword_Click(object sender, EventArgs e)
 		{
 			txtPassword.Text = "";
+		}
+
+		private void txtServerIP_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				btnConnect_Click(sender, e);
+			}
+		}
+
+		private void txtUsername_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				btnSignin_Click(sender, e);
+			}
+		}
+
+		private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == (char)Keys.Enter)
+			{
+				btnSignin_Click(sender, e);
+			}
 		}
 	}
 }

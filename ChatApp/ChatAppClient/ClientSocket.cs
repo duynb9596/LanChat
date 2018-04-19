@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace ChatAppClient
 {
@@ -41,11 +42,18 @@ namespace ChatAppClient
 
 		void ConnectCallback(IAsyncResult ar)
 		{
-			_socket.EndConnect(ar);
-			_connected = true;
-			Connected(this, EventArgs.Empty);
-			var buffer = new byte[_socket.ReceiveBufferSize];
-			_socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, ReadCallback, buffer);
+			try
+			{
+				_socket.EndConnect(ar);
+				_connected = true;
+				Connected(this, EventArgs.Empty);
+				var buffer = new byte[_socket.ReceiveBufferSize];
+				_socket.BeginReceive(buffer, 0, buffer.Length, SocketFlags.None, ReadCallback, buffer);
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show("Cannot find any server with this IP!\nPlease try again or check your connection!");
+			}	
 		}
 
 		private void ReadCallback(IAsyncResult ar)

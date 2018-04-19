@@ -13,7 +13,6 @@ C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.exe
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\bin\Debug\ChatAppClient.pdb
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csprojResolveAssemblyReference.cache
-C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.ChatZone.resources
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Login.resources
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.Properties.Resources.resources
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.csproj.GenerateResource.Cache

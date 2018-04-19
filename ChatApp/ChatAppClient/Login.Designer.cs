@@ -79,6 +79,7 @@
 			this.txtServerIP.TabIndex = 1;
 			this.txtServerIP.Text = "Enter Server IP";
 			this.txtServerIP.Click += new System.EventHandler(this.txtServerIP_Click);
+			this.txtServerIP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtServerIP_KeyPress);
 			// 
 			// label5
 			// 
@@ -130,6 +131,7 @@
 			this.txtUsername.TabIndex = 3;
 			this.txtUsername.Text = "Enter your username";
 			this.txtUsername.Click += new System.EventHandler(this.txtUsername_Click);
+			this.txtUsername.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtUsername_KeyPress);
 			// 
 			// label8
 			// 
@@ -162,6 +164,7 @@
 			this.txtPassword.TabIndex = 4;
 			this.txtPassword.Text = "Enter your password";
 			this.txtPassword.Click += new System.EventHandler(this.txtPassword_Click);
+			this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
 			// 
 			// label11
 			// 

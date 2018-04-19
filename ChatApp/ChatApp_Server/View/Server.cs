@@ -40,12 +40,36 @@ namespace ChatApp_Server
 			var client = new Client(socket);
 			client.Received += client_Received;
 			client.Disconnected += client_Disconnected;
+			string ip = client.Ip.ToString();
+			Invoke(new Action(() =>
+			{
+				var item = new ListViewItem(ip); // ip
+				item.SubItems.Add("<<undefined>>"); // nickname
+				item.Tag = client;
+				livActiveUser.Items.Add(item);
+			}));
 			clients.Add(socket);
-			Invoke(new Action(() => richtxtServer.AppendText("A client connect to Server on " + socket.RemoteEndPoint + "\n")));
+			string message = "Connect|Server|Accepted|" + ip;
+			client.Send(message);
+			AppendText_txtOutgoingMessage(ip, message);
+			
+			AppendText_txtConnectMessage(ip, "A client connect to Server on " + socket.RemoteEndPoint.ToString());
 		}
 
 		private void client_Disconnected(Client sender)
 		{
+			Invoke(new Action(() =>
+			{
+				for (int i = 0; i < livActiveUser.Items.Count; i++)
+				{
+					var client = livActiveUser.Items[i].Tag as Client;
+					if (client.Ip == sender.Ip)
+					{
+						livActiveUser.Items.RemoveAt(i);
+						AppendText_txtConnectMessage(sender.Ip.ToString(), "Client " + sender.Ip.ToString() + " has disconnected!");
+					}
+				}
+			}));
 		}
 
 		private void client_Received(Client sender, byte[] data)
@@ -57,9 +81,7 @@ namespace ChatApp_Server
 			string mRecipient = message[3];
 			var fullMessage = Encoding.ASCII.GetString(data);
 			string ip = sender.Ip.ToString();
-			Invoke(new Action(() => richtxtServer.AppendText(ip + ": " )));
-			Invoke(new Action(() => richtxtServer.AppendText(fullMessage)));
-			Invoke(new Action(() => richtxtServer.AppendText(Environment.NewLine)));
+			AppendText_txtIncomingMessage(ip, fullMessage);
 			switch (mType)
 			{
 				case "Login":
@@ -76,14 +98,53 @@ namespace ChatApp_Server
 
 		private void LoginAction(Client sender, string username, string password)
 		{
+			string message;
+			string ip = sender.Ip.ToString();
 			if(serverController.CheckLogin(username, password))
 			{
-				sender.Send("Login|Server|LoginSucceeded|" + sender.Ip);
+				message = "Login|Server|" + username + "|" + sender.Ip.ToString();
+				Invoke(new Action(() =>
+				{
+					for (int i = 0; i < livActiveUser.Items.Count; i++)
+					{
+						var item = livActiveUser.Items[i];
+						if (ip == item.SubItems[0].Text)
+						{
+							item.SubItems[1].Text = username;
+						}
+					}		
+				}));
+				Broadcast("NewActiveUser|Server|" + username + "|<<AllUsers>>");
+				AppendText_txtOutgoingMessage("<<AllUsers>>", "NewActiveUser|Server|" + username + "|<<AllUsers>>");
+				sender.Send(message);
+				SendListUsers(sender, username);
 			}
 			else
 			{
-				sender.Send("Login|Server|LoginFailed|" + sender.Ip);
-			}
+				message = "Login|Server|<<LoginFailed>>|" + sender.Ip.ToString();
+				sender.Send(message);
+			}	
+			AppendText_txtOutgoingMessage(ip, message);
+		}
+
+		private void AppendText_txtConnectMessage(string recipient, string message)
+		{
+			Invoke(new Action(() => txtConnectMessage.AppendText(System.DateTime.Now + ":\n" + message)));
+			Invoke(new Action(() => txtConnectMessage.AppendText(Environment.NewLine + Environment.NewLine)));
+		}
+
+		private void AppendText_txtIncomingMessage(string recipient, string message)
+		{
+			Invoke(new Action(() => txtIncomingMessage.AppendText(System.DateTime.Now + ":\nFrom " + recipient + ": ")));
+			Invoke(new Action(() => txtIncomingMessage.AppendText(message)));
+			Invoke(new Action(() => txtIncomingMessage.AppendText(Environment.NewLine + Environment.NewLine)));
+		}
+
+		private void AppendText_txtOutgoingMessage(string recipient, string message)
+		{
+			Invoke(new Action(() => txtOutgoingMessage.AppendText(System.DateTime.Now + ":\nTo " + recipient + ": ")));
+			Invoke(new Action(() => txtOutgoingMessage.AppendText(message)));
+			Invoke(new Action(() => txtOutgoingMessage.AppendText(Environment.NewLine + Environment.NewLine)));
 		}
 
 		private void PrivateMessage()
@@ -94,7 +155,44 @@ namespace ChatApp_Server
 		private void Server_Load(object sender, EventArgs e)
 		{
 			listener.Start();
-			richtxtServer.AppendText("Server started!\n");
+			txtConnectMessage.AppendText(System.DateTime.Now + ":\nServer started!\n\n");
+		}
+
+		private void livActiveUser_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void SendListUsers(Client sender, string recipient)
+		{
+			string mContent = "";
+			Invoke(new Action(() =>
+			{
+				foreach (ListViewItem itemRow in this.livActiveUser.Items)
+				{
+					mContent += itemRow.SubItems[1].Text + "/";
+				}
+			}));
+			mContent += "<<null>>";
+			
+			string message = "ListUsers|Server|" + mContent + "|" + recipient;
+			sender.Send(message);
+			AppendText_txtOutgoingMessage(recipient, message);
+		}
+
+		private void Broadcast(string message)
+		{
+			for (int i = 0; i < clients.Count; i++)
+			{
+				try
+				{
+					clients[i].Send(Encoding.ASCII.GetBytes(message));
+				}
+				catch(Exception ex)
+				{
+					MessageBox.Show(ex.ToString());
+				}
+			}
 		}
 
 		//private void StartServer()
@@ -121,8 +219,8 @@ namespace ChatApp_Server
 		//}
 
 		//public void Service(){
-			
-			
+
+
 		//	while (true){
 		//		Socket socket = listener.AcceptSocket();
 		//		socket.SetSocketOption(SocketOptionLevel.Socket,
@@ -148,8 +246,8 @@ namespace ChatApp_Server
 		//}
 
 		//private void button1_Click(object sender, EventArgs e)
-  //      {
-  //          StartServer();
-  //      }
-    }
+		//      {
+		//          StartServer();
+		//      }
+	}
 }

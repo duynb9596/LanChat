@@ -45,12 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChatZone.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ChatZone.Designer.cs">
-      <DependentUpon>ChatZone.cs</DependentUpon>
-    </Compile>
     <Compile Include="ClientSocket.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -66,9 +60,6 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ChatZone.resx">
-      <DependentUpon>ChatZone.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
