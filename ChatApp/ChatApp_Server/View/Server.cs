@@ -127,6 +127,11 @@ namespace ChatApp_Server
 			AppendText_txtOutgoingMessage(ip, message);
 		}
 
+		private void PrivateMessage()
+		{
+
+		}
+
 		private void AppendText_txtConnectMessage(string recipient, string message)
 		{
 			Invoke(new Action(() => txtConnectMessage.AppendText(System.DateTime.Now + ":\n" + message)));
@@ -145,11 +150,6 @@ namespace ChatApp_Server
 			Invoke(new Action(() => txtOutgoingMessage.AppendText(System.DateTime.Now + ":\nTo " + recipient + ": ")));
 			Invoke(new Action(() => txtOutgoingMessage.AppendText(message)));
 			Invoke(new Action(() => txtOutgoingMessage.AppendText(Environment.NewLine + Environment.NewLine)));
-		}
-
-		private void PrivateMessage()
-		{
-
 		}
 
 		private void Server_Load(object sender, EventArgs e)

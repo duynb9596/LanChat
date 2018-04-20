@@ -20,3 +20,4 @@ C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.exe
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.pdb
 C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.User.resources
+C:\Users\Win 8.1 Version 2\Desktop\ChatApp\ChatAppClient\obj\Debug\ChatAppClient.PrivateChat.resources

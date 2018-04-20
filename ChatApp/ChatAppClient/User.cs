@@ -12,7 +12,9 @@ namespace ChatAppClient
 {
 	public partial class User : Form
 	{
-		Login _loginForm;
+		public Login _loginForm;
+		public List<PrivateChat> listPrivateChat = new List<PrivateChat>();
+
 		public User(Login loginForm)
 		{
 			_loginForm = loginForm;
@@ -85,6 +87,12 @@ namespace ChatAppClient
 		private void User_FormClosed(object sender, FormClosedEventArgs e)
 		{
 			_loginForm.Close();
+		}
+
+		private void livUsers_DoubleClick(object sender, EventArgs e)
+		{
+			PrivateChat privateChat = new PrivateChat(this, lblUsername.Text, livUsers.SelectedItems[0].Text.ToString());
+			privateChat.Show();
 		}
 	}
 }

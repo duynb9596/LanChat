@@ -31,9 +31,9 @@
 			this.lblUsername = new System.Windows.Forms.Label();
 			this.tbpGroup = new System.Windows.Forms.TabPage();
 			this.tbpUser = new System.Windows.Forms.TabPage();
-			this.tabControl = new System.Windows.Forms.TabControl();
 			this.livUsers = new System.Windows.Forms.ListView();
 			this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.tabControl = new System.Windows.Forms.TabControl();
 			this.tbpUser.SuspendLayout();
 			this.tabControl.SuspendLayout();
 			this.SuspendLayout();
@@ -70,19 +70,6 @@
 			this.tbpUser.Text = "Users";
 			this.tbpUser.UseVisualStyleBackColor = true;
 			// 
-			// tabControl
-			// 
-			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.tabControl.Controls.Add(this.tbpUser);
-			this.tabControl.Controls.Add(this.tbpGroup);
-			this.tabControl.Location = new System.Drawing.Point(0, 130);
-			this.tabControl.Name = "tabControl";
-			this.tabControl.SelectedIndex = 0;
-			this.tabControl.Size = new System.Drawing.Size(273, 297);
-			this.tabControl.TabIndex = 2;
-			// 
 			// livUsers
 			// 
 			this.livUsers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -98,11 +85,25 @@
 			this.livUsers.TabIndex = 4;
 			this.livUsers.UseCompatibleStateImageBehavior = false;
 			this.livUsers.View = System.Windows.Forms.View.Details;
+			this.livUsers.DoubleClick += new System.EventHandler(this.livUsers_DoubleClick);
 			// 
 			// columnHeader1
 			// 
 			this.columnHeader1.Text = "IP Address";
 			this.columnHeader1.Width = 267;
+			// 
+			// tabControl
+			// 
+			this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.tabControl.Controls.Add(this.tbpUser);
+			this.tabControl.Controls.Add(this.tbpGroup);
+			this.tabControl.Location = new System.Drawing.Point(0, 130);
+			this.tabControl.Name = "tabControl";
+			this.tabControl.SelectedIndex = 0;
+			this.tabControl.Size = new System.Drawing.Size(273, 297);
+			this.tabControl.TabIndex = 2;
 			// 
 			// User
 			// 

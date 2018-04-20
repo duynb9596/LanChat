@@ -56,6 +56,7 @@
 			this.txtConnectMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtConnectMessage.Location = new System.Drawing.Point(12, 224);
 			this.txtConnectMessage.Name = "txtConnectMessage";
+			this.txtConnectMessage.ReadOnly = true;
 			this.txtConnectMessage.Size = new System.Drawing.Size(210, 201);
 			this.txtConnectMessage.TabIndex = 2;
 			this.txtConnectMessage.Text = "";
@@ -65,6 +66,7 @@
 			this.txtIncomingMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtIncomingMessage.Location = new System.Drawing.Point(228, 224);
 			this.txtIncomingMessage.Name = "txtIncomingMessage";
+			this.txtIncomingMessage.ReadOnly = true;
 			this.txtIncomingMessage.Size = new System.Drawing.Size(210, 201);
 			this.txtIncomingMessage.TabIndex = 2;
 			this.txtIncomingMessage.Text = "";
@@ -74,6 +76,7 @@
 			this.txtOutgoingMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtOutgoingMessage.Location = new System.Drawing.Point(444, 224);
 			this.txtOutgoingMessage.Name = "txtOutgoingMessage";
+			this.txtOutgoingMessage.ReadOnly = true;
 			this.txtOutgoingMessage.Size = new System.Drawing.Size(210, 201);
 			this.txtOutgoingMessage.TabIndex = 2;
 			this.txtOutgoingMessage.Text = "";
