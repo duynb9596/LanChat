@@ -12,14 +12,14 @@
  - Cập nhập avatar
  - Tạo nhóm chat
  - Chat nhóm
- - xem lịch sử chat nhóm
+ - Xem lịch sử chat nhóm
  # Kiến thức áp dụng
  - Ngôn ngữ lập trình C#
  - Winform
  - Kết nối SQL server với ứng dụng winform
  - Chuyển data giữa các form
  - Phân quyền người dùng trên ứng dụng
- - kết nối client, server
+ - Kết nối client, server
  - Truyền, nhận dữ liệu qua lại giữa các client , server 
  # Nền tản xây dựng
 <h4>- Sơ lượt về C#.Net, SQl server và mô hình MVC:</h4>
@@ -55,7 +55,7 @@
 
 
 # Thành viên
-- Nguyễn Bảo Duy	 (***14520219@gm.uit.edu.vn***)
+- Nguyễn Bảo Duy   (***14520219@gm.uit.edu.vn***)
 - Hoàng Thùy Trang (***16521277@gm.uit.edu.vn***)
 - Trần Thị Thu Tình (***16521250@gm.uit.edu.vn***)
 
